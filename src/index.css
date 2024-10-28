@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Profile Effects */
+.profile-effect-flame {
+  background: linear-gradient(45deg, #ff4d4d, #f9cb28);
+  animation: flame 2s infinite;
+  mix-blend-mode: soft-light;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.profile-effect-neon {
+  background: linear-gradient(-45deg, #ff00ff, #00ffff);
+  animation: neon 3s infinite;
+  mix-blend-mode: soft-light;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.profile-effect-matrix {
+  background: linear-gradient(90deg, #00ff00, #003300);
+  animation: matrix 2s infinite;
+  mix-blend-mode: soft-light;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.profile-effect-rainbow {
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 200% 200%;
+  animation: rainbow 3s linear infinite;
+  mix-blend-mode: soft-light;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.profile-effect-cosmic {
+  background: linear-gradient(to right, #663399, #bc13fe);
+  animation: cosmic 4s ease infinite;
+  mix-blend-mode: soft-light;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Avatar Decorations */
+.avatar-decoration-azure {
+  background: linear-gradient(45deg, #00a8ff, #0097e6);
+  animation: pulse 2s infinite;
+  mix-blend-mode: screen;
+  opacity: 0.8;
+}
+
+.avatar-decoration-rainbow {
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 200% 200%;
+  animation: rainbow 3s linear infinite;
+  mix-blend-mode: screen;
+  opacity: 0.8;
+}
+
+.avatar-decoration-pixel {
+  background: repeating-linear-gradient(
+    45deg,
+    #ff00ff,
+    #ff00ff 10px,
+    #00ffff 10px,
+    #00ffff 20px
+  );
+  animation: pixel 2s linear infinite;
+  mix-blend-mode: screen;
+  opacity: 0.8;
+}
+
+/* Animations */
+@keyframes flame {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes neon {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+@keyframes matrix {
+  0% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.5; }
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes cosmic {
+  0% { filter: brightness(0.8) hue-rotate(0deg); }
+  50% { filter: brightness(1.2) hue-rotate(180deg); }
+  100% { filter: brightness(0.8) hue-rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+@keyframes pixel {
+  0% { background-position: 0 0; }
+  100% { background-position: 20px 20px; }
+}
